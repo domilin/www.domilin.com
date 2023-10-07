@@ -1,0 +1,54 @@
+@mixin iconClassic {
+    display: block;
+    height: auto;
+    box-shadow: none !important;
+    background: none !important;
+
+    .website-item-new-folder-bg {
+        height: var(--icon__size);
+    }
+
+    &.new-folder {
+        .website-item-new-folder-bg {
+            top: -6px;
+            left: -6px;
+            height: calc(var(--icon__size) + 12px);
+            width: calc(var(--icon__size) + 12px);
+        }
+    }
+
+    .website-item-icon {
+        height: var(--icon__size);
+        border-radius: var(--icon__radius);
+        transition: box-shadow 0.3s ease 0s;
+        position: relative;
+        z-index: 1;
+
+        @include themeify {
+            box-shadow: 0  8px 12px 0 themed('box-shadow');
+        }
+    }
+
+    .website-item-info {
+        position: relative;
+        z-index: 1;
+        padding: 0;
+        width: 100%;
+
+        .website-item-name {
+            margin-top: calc(var(--icon__text__size) * 6 / 14);
+            text-align: center;
+            font-weight: normal;
+            transition: all 0.3s ease 0s;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+            @include themeify {
+                color: themed('icon-classic-text-color');
+            }
+        }
+
+        .website-item-intro {
+            display: none;
+        }
+    }
+}

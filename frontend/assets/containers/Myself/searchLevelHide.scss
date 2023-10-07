@@ -1,0 +1,91 @@
+@import '../../public/css/cssVariable.scss';
+
+body {
+    @include searchLevelPaddingTop;
+
+    .search-show-level-hide {
+        padding-top: calc(var(--search__level__padding__top) + var(--search__size) + var(--search__level__padding__bottom)) !important;
+
+        .search-level {
+            &:after {
+                display: none;
+            }
+        }
+
+        .category-content {
+            $height: calc(100vh - (var(--search__level__padding__top) + var(--search__size) + var(--search__level__padding__bottom) + 40px)) !important;
+
+            min-height: $height;
+
+            .swiper-container {
+                min-height: $height;
+
+                .swiper-wrapper {
+                    min-height: $height;
+
+                    .swiper-slide {
+                        min-height: $height;
+                    }
+                }
+            }
+        }
+    }
+
+    .search-hide-level-show {
+        padding-top: calc(var(--search__level__padding__top) + var(--level__size) + 20px) !important;
+
+        .category-content {
+            $height: calc(100vh - (var(--search__level__padding__top) + 20px + var(--level__size) + 40px)) !important;
+
+            min-height: $height;
+
+            .swiper-container {
+                min-height: $height;
+
+                .swiper-wrapper {
+                    min-height: $height;
+
+                    .swiper-slide {
+                        min-height: $height;
+                    }
+                }
+            }
+        }
+    }
+
+    .search-hide-level-hide {
+        padding-top: var(--search__level__padding__top) !important;
+
+        .search-level {
+            &:after {
+                display: none;
+            }
+        }
+
+        .category-content {
+            .category-content {
+                $height: calc(100vh - (var(--search__level__padding__top) + 40px)) !important;
+
+                min-height: $height;
+
+                .swiper-container {
+                    min-height: $height;
+
+                    .swiper-wrapper {
+                        min-height: $height;
+
+                        .swiper-slide {
+                            min-height: $height;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        @include searchLevelPaddingTopMob;
+    }
+}

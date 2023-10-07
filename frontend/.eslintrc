@@ -1,0 +1,49 @@
+{
+  "extends": "standard",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "parser": "babel-eslint",
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "no-control-regex": 0,
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "always",
+        "asyncArrow": "always"
+      }
+    ],
+    "font-family-no-missing-generic-family-keyword": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "globals": {
+    "wx": true,
+    "YpRiddler": true,
+    "CONFIG": true,
+    "$": true,
+    "Swiper": true,
+    "layer": true,
+    "CanvasParticle": true,
+    "chrome": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  }
+}

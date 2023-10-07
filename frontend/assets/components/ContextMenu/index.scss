@@ -1,0 +1,35 @@
+@import '../../public/css/themes/themeify.scss';
+
+.context-menu-content {
+    position: fixed;
+    z-index: 999;
+    border-radius: 5px;
+    overflow: hidden;
+
+    @include themeify {
+        background: themed('block-bg-not-transparency');
+        box-shadow: 0 5px 10px 0 themed('box-shadow-hover');
+    }
+
+    .context-menu-buttons {
+        li {
+            padding: 8px 16px;
+            font-size: 14px;
+            transition: all 0.3s ease-in-out 0s;
+            white-space: nowrap;
+            cursor: pointer;
+
+            @include themeify {
+                color: themed('block-font-color');
+            }
+
+            &:hover,
+            &.active {
+                @include themeify {
+                    color: themed('font-color-white-grey');
+                    background: themed('block-bg-color-hover');
+                }
+            }
+        }
+    }
+}

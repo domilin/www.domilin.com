@@ -1,0 +1,48 @@
+@import '~rc-slider/assets/index.css';
+@import '../../public/css/themes/themeify.scss';
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 64%;
+
+    .rc-slider {
+        .rc-slider-step {
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .rc-slider-rail {
+            @include themeify {
+                background: themed('grey-white-bg');
+            }
+        }
+
+        .rc-slider-handle {
+            margin-top: -4px;
+            border: none !important;
+            box-shadow: none;
+            background-color: #1890ff;
+            box-sizing: content-box;
+            height: 12px;
+            width: 12px;
+        }
+
+        .rc-slider-track {
+            opacity: 0.5;
+            background-color: #1890ff;
+        }
+    }
+
+    .slider-current-value {
+        font-size: 12px;
+        line-height: 86%;
+        text-align: left;
+        width: 42px;
+
+        @include themeify {
+            color: themed('block-font-color');
+        }
+    }
+}

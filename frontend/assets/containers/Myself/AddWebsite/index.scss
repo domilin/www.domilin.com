@@ -1,0 +1,287 @@
+@import '../../../public/css/themes/themeify.scss';
+
+.add-my-website {
+    width: 800px;
+
+    @include themeify {
+        color: themed('block-font-color');
+    }
+
+    .add-my-website-title {
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 500;
+
+        @include themeify {
+            color: themed('font-color-white-grey');
+        }
+    }
+
+    .add-my-website-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .site-info {
+            width: 420px;
+
+            .form-item {
+                margin-bottom: 24px;
+            }
+
+            .onekey-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .onekey-info-input {
+                    position: relative;
+                    width: 264px;
+
+                    input {
+                        padding-right: 30px;
+                        width: 220px;
+                    }
+
+                    .iconfont {
+                        position: absolute;
+                        left: inherit;
+                        right: 6px;
+                        top: 10px;
+                        cursor: pointer;
+                        transition: all 0.3s ease 0s;
+                        z-index: 2;
+
+                        &:hover {
+                            @include themeify {
+                                color: themed('block-font-color-hover');
+                            }
+                        }
+                    }
+
+                    .onekey-tips {
+                        padding: 10px;
+                        position: absolute;
+                        right: 36px;
+                        top: -36px;
+                        border-radius: 3px;
+                        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+                        display: none;
+                        width: 208px;
+                        font-size: 14px;
+                        line-height: 24px;
+                        z-index: 1;
+
+                        @include themeify {
+                            background: themed('block-bg-not-transparency');
+                            color: themed('block-font-color');
+                        }
+
+                        &:before {
+                            content: '';
+                            margin-top: -5px;
+                            position: absolute;
+                            right: -19px;
+                            top: 48px;
+                            border-width: 10px;
+                            border-style: solid;
+                            height: 0;
+                            width: 0;
+
+                            @include themeify {
+                                border-color: transparent transparent transparent themed('block-bg-not-transparency');
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    margin: 0;
+                }
+            }
+        }
+
+        .cropper-wrapper {
+            max-height: 600px;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            .image-cropper {
+                width: 380px;
+            }
+
+            .sure-cropper {
+                margin-top: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .site-icon {
+            width: 360px;
+
+            .icon-preview {
+                h4 {
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                    font-weight: normal;
+                }
+
+                ul {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: space-between;
+                    list-style: none;
+
+                    li {
+                        .icon-item {
+                            position: relative;
+                            height: 90px;
+                            width: 90px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 48px;
+                            font-weight: bold;
+                            cursor: pointer;
+                            border-radius: 3px;
+                            border: 2px solid rgba(0, 0, 0, 0);
+                            transition: all 0.3s ease 0s;
+                            overflow: hidden;
+
+                            @include themeify {
+                                background: themed('grey-white-bg');
+                                color: themed('grey-white-bg-clolor');
+                            }
+
+                            &.active {
+                                border: 2px solid #3f91f7;
+                            }
+
+                            &.official {
+                                img {
+                                    height: 48px;
+                                    width: 48px;
+                                }
+                            }
+
+                            &.character {
+                                white-space: nowrap;
+                                text-align: center;
+                                line-height: 48px;
+                            }
+
+                            &.image {
+                                span {
+                                    font-size: 48px;
+                                    font-weight: bold;
+                                }
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+
+                                input {
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    height: 100%;
+                                    width: 100%;
+                                    background: none;
+                                    border: none;
+                                    opacity: 0;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+
+                        p {
+                            margin-top: 8px;
+                            font-size: 14px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sure-add-website {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .add-my-website-wrapper {
+        .popup-content {
+            padding: 32px 0 16px !important;
+            border-radius: 0 !important;
+            max-height: calc(100vh - 32px - 16px) !important;
+        }
+    }
+
+    .add-my-website {
+        padding: 0 16px !important;
+        max-height: calc(100vh - 32px - 16px) !important;
+        width: calc(100vw - 32px);
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .add-my-website-content {
+            display: block;
+
+            .site-info {
+                margin: 0 0 16px 0;
+                width: calc(100vw - 32px);
+
+                .onekey-info {
+                    display: block;
+
+                    .onekey-info-input {
+                        width: 100%;
+
+                        input {
+                            width: calc(100% - 42px);
+                        }
+                    }
+
+                    button {
+                        margin-top: 8px;
+                    }
+                }
+            }
+
+            .cropper-wrapper {
+                margin-bottom: 16px;
+                width: calc(100vw - 32px);
+
+                .image-cropper {
+                    width: auto;
+                }
+            }
+
+            .site-icon {
+                width: calc(100vw - 32px);
+
+                .icon-preview ul li .icon-item {
+                    height: 80px;
+                    width: 80px;
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .sure-add-website {
+            button {
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}

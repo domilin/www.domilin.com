@@ -1,0 +1,59 @@
+@import '../../public/css/themes/themeify.scss';
+
+.react-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .no-page {
+        margin: 0 5px;
+        padding-bottom: 8px;
+        line-height: 10px;
+    }
+
+    a {
+        margin: 0 5px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: block;
+        height: 30px;
+        width: 30px;
+        overflow: hidden;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: center;
+
+        @include themeify {
+            color: themed('block-font-color');
+            background: themed('block-bg-not-transparency');
+        }
+
+        &.active,
+        &:hover {
+            @include themeify {
+                color: #fff;
+                background: #3f91f7;
+            }
+        }
+
+        &.prev,
+        &.next {
+            background: none;
+            border: none;
+            border-radius: initial;
+            height: auto;
+            width: auto;
+            color: #666;
+
+            &:hover {
+                background: none;
+                border: none;
+                color: #3f91f7;
+            }
+
+            &.disabled {
+                opacity: 0.5;
+            }
+        }
+    }
+}

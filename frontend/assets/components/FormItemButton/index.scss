@@ -1,0 +1,53 @@
+@import '../../public/css/themes/themeify.scss';
+
+.form-item-button {
+    position: relative;
+    padding: 8px 0;
+    user-select: none;
+    cursor: pointer;
+
+    .form-item-button-content {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h5 {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 1.3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .iconfont {
+            font-size: 14px;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        padding: 0 8px;
+        left: -8px;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.3s ease-in-out 0s;
+        border-radius: 4px;
+        z-index: 0;
+
+        @include themeify {
+            background: themed('block-on-popup-item-hover');
+        }
+    }
+
+    &:hover,
+    &.active {
+        &:before {
+            opacity: 1;
+        }
+    }
+}

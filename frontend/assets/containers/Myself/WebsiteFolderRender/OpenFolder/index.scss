@@ -1,0 +1,165 @@
+@import '../../../../public/css/themes/themeify.scss';
+
+@mixin classicFontColor {
+    .website-item-wrapper {
+        .website-item-info {
+            .website-item-name {
+                opacity: 0.8;
+
+                @include themeify {
+                    color: themed('font-color-white-grey');
+                }
+            }
+        }
+    }
+}
+
+@mixin iconClassicLight {
+    .website-folder {
+        /* 4个图标+3个间距+两边边距+6px的滚动条弹性空间 */
+        width: calc(var(--icon__size) * 4 + 24px * 3 + 32px + 6px);
+
+        .website-folder-content {
+            .website-item-list-scroll {
+                .website-item-list {
+                    grid-template-columns: repeat(auto-fill, var(--icon__size));
+                }
+            }
+        }
+    }
+}
+
+.website-folder-open {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+    .website-folder-open-mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        opacity: 0.92;
+        background: rgba(0, 0, 0, 0.6);
+        transition: opacity 0.3s ease 0s;
+    }
+
+    .website-folder {
+        width: calc(var(--icon__size) * 2.6 * 2 + 24px + 32px + 6px);
+        height: calc(var(--icon__size) * 4 + 24px * 3 + 32px + 48px);
+        z-index: 1;
+
+        .website-folder-content {
+            height: calc(var(--icon__size) * 4 + 24px * 3 + 32px);
+            padding: 0;
+            border-radius: 7px;
+            overflow: hidden;
+
+            @include themeify {
+                background: themed('block-bg-color');
+                box-shadow: 0  8px 12px 0 themed('box-shadow');
+            }
+
+            .website-item-list-scroll {
+                padding: 16px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                box-sizing: border-box;
+                height: 100%;
+
+                .website-item-list {
+                    grid-template-columns: repeat(auto-fill, calc(var(--icon__size) * 2.6));
+                    height: auto;
+                    display: grid;
+                    gap: 24px;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .website-folder-name {
+            margin-top: 6px;
+
+            .website-folder-name-editor {
+                .form-item {
+                    margin: 0;
+                    padding: 0;
+
+                    input {
+                        text-align: center;
+                    }
+                }
+            }
+
+            .website-folder-name-text {
+                height: 38px;
+                text-align: center;
+                font-size: 16px;
+                line-height: 38px;
+                cursor: text;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                color: rgba(255, 255, 255, 0.9);
+            }
+        }
+    }
+
+    &.icon-classic,
+    &.icon-light {
+        @include iconClassicLight();
+    }
+
+    &.icon-classic {
+        .website-folder {
+            /* /components/WebsiteItem/index.scss(icon-classic)高度--height */
+
+            /* /containers/Myself/WebsiteFolderRender/CloseFolder/index.scss (icon-classic)高度--height */
+
+            /* 上述两个高度与此高度一致 */
+
+            /* 3个(图标+字体+上边距)+3个间距+两边边距 */
+            height: calc((var(--icon__size) + var(--icon__text__size) * 6 / 14 + var(--icon__text__size)) * 3 + 24px * 3 + 28px + 48px);
+
+            .website-folder-content {
+                height: calc((var(--icon__size) + var(--icon__text__size) * 6 / 14 + var(--icon__text__size)) * 3 + 24px * 3 + 28px);
+
+                @include classicFontColor();
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .website-folder-open {
+        @include iconClassicLight();
+
+        .website-folder {
+            height: calc((var(--icon__size) + var(--icon__text__size) * 6 / 14 + var(--icon__text__size)) * 3 + 24px * 3 + 24px + 48px) !important;
+
+            .website-folder-content {
+                height: calc((var(--icon__size) + var(--icon__text__size) * 6 / 14 + var(--icon__text__size)) * 3 + 24px * 3 + 24px) !important;
+
+                @include classicFontColor();
+            }
+        }
+
+        &.icon-light {
+            .website-folder {
+                height: calc(var(--icon__size) * 4 + 24px * 3 + 32px + 48px) !important;
+
+                .website-folder-content {
+                    height: calc(var(--icon__size) * 4 + 24px * 3 + 32px) !important;
+                }
+            }
+        }
+    }
+}

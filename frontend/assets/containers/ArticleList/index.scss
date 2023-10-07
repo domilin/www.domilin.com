@@ -1,0 +1,18 @@
+@import '../../public/css/cssVariable.scss';
+
+.tag-list {
+    @include searchVar;
+    @include careerArticleSearchStyle;
+
+    padding: 0 120px;
+    width: calc(100% - 240px);
+}
+
+@media only screen and (max-width: 768px) {
+    .tag-list {
+        @include searchVarMob;
+
+        padding: 0 8px;
+        width: calc(100% - 16px);
+    }
+}

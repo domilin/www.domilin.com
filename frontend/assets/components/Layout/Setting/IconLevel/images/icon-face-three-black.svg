@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="60px" viewBox="0 0 96 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>icon-iconLayout3-dark</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon-iconLayout3-dark" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#242424" fill-rule="nonzero" x="0" y="0" width="96" height="60"></rect>
+        <rect id="Rectangle" fill="#676767" fill-rule="nonzero" x="24" y="8" width="48" height="8" rx="1"></rect>
+        <rect id="Rectangle" fill="#676767" fill-rule="nonzero" x="14" y="24" width="10" height="10" rx="2"></rect>
+        <rect id="Rectangle" fill="#676767" fill-rule="nonzero" x="14" y="40" width="10" height="10" rx="2"></rect>
+        <rect id="Rectangle" fill="#676767" fill-rule="nonzero" x="33" y="24" width="10" height="10" rx="2"></rect>
+        <rect id="Rectangle" fill="#676767" fill-rule="nonzero" x="33" y="40" width="10" height="10" rx="2"></rect>
+        <rect id="Rectangle" fill="#676767" fill-rule="nonzero" x="52" y="24" width="10" height="10" rx="2"></rect>
+        <rect id="Rectangle" fill="#676767" fill-rule="nonzero" x="72" y="24" width="10" height="10" rx="2"></rect>
+        <rect id="Rectangle" fill="#676767" fill-rule="nonzero" x="52" y="40" width="10" height="10" rx="2"></rect>
+        <rect id="Rectangle" fill="#676767" fill-rule="nonzero" x="72" y="40" width="10" height="10" rx="2"></rect>
+    </g>
+</svg>

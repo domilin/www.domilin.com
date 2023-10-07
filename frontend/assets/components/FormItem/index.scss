@@ -1,0 +1,54 @@
+@import '../../public/css/themes/themeify.scss';
+
+.form-item {
+    margin-bottom: 24px;
+    position: relative;
+    padding-top: 26px;
+
+    h4,
+    .error {
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .error {
+        left: initial;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: #ed1f38;
+
+        .iconfont {
+            margin-right: 2px;
+        }
+
+        em {
+            font-style: normal;
+        }
+    }
+
+    input,
+    textarea {
+        padding: 8px 12px;
+        font-size: 14px;
+        height: 100%;
+        border-radius: 4px;
+        width: calc(100% - 26px);
+        outline: none;
+        resize: none;
+
+        @include themeify {
+            background: themed('block-bg-color-hover');
+            border: 1px solid themed('border-color');
+            color: themed('block-font-color-hover');
+        }
+    }
+
+    textarea {
+        height: 80px;
+    }
+}

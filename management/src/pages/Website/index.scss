@@ -1,0 +1,50 @@
+.twitter-picker {
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.color-example {
+  margin-bottom: 10px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  span {
+    display: block;
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+}
+
+.page-website {
+  .move-to-other {
+    margin-bottom: 8px;
+    width: 174px;
+  }
+
+  .nav-item {
+    margin: 0 10px 10px 0;
+    display: inline-flex;
+    align-items: center;
+
+    .iconfont {
+      margin: 2px 8px 0 0;
+      padding: 0;
+      font-size: 14px;
+      height: 14px;
+      line-height: 14px;
+    }
+  }
+
+  .website-item {
+    .ant-btn {
+      height: auto;
+    }
+
+    img {
+      width: 30px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import '../../../../public/css/themes/themeify.scss';
+
+.theme-wrapper,
+.wallpaper-wrapper {
+    width: 50%;
+}
+
+.wallpaper-wrapper {
+    margin-left: 16px;
+
+    .wallpaper-custom-item {
+        height: 100%;
+        width: 100%;
+        background-size: 100% auto;
+
+        @include themeify {
+            background-color: themed('setting-select-bg');
+        }
+    }
+
+    .upload-wallpaper {
+        input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            height: 110%;
+            width: 110%;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+
+    .download-wallpaper {
+        a {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            display: block;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+}

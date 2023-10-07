@@ -1,0 +1,10 @@
+body {
+    background: rgba(0, 0, 0, 0.08);
+    height: 600px !important;
+    width: 378px !important;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}

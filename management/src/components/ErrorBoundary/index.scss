@@ -1,0 +1,11 @@
+.error-boundary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+
+  pre {
+    display: none;
+  }
+}

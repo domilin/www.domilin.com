@@ -1,0 +1,340 @@
+html,
+body,
+#root {
+    height: 100%;
+}
+
+.signin-wrapper {
+    position: relative;
+    background: linear-gradient(to top, #f9efee 60%, #f5f4f2);
+    height: 100%;
+    min-height: 800px;
+
+    .wave-bg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 90%;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .sign-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .sign-content {
+            width: 500px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+
+            h3 {
+                margin-bottom: 10px;
+                color: #333;
+                font-size: 32px;
+                font-weight: normal;
+                text-align: center;
+            }
+
+            .item {
+                width: 100%;
+
+                em {
+                    font-style: normal;
+                }
+
+                &.graph-validate {
+                    .input-wrapper {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .input {
+                            width: 330px;
+                        }
+
+                        .graph-code {
+                            width: 140px;
+                        }
+                    }
+                }
+
+                &.eamil-validate {
+                    .input-wrapper {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .input {
+                            width: 360px;
+                        }
+
+                        .send-email-validate {
+                            width: 120px;
+                            color: #676767;
+                            font-size: 16px;
+                            justify-content: center;
+                            cursor: pointer;
+                            transition: all 0.3s ease-in 0s;
+
+                            &:hover {
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+
+                &.user-name {
+                    .input {
+                        span.iconfont {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                &.password {
+                    .input {
+                        span.iconfont {
+                            margin-bottom: -2px;
+                            font-size: 24px;
+                            line-height: 16px;
+                        }
+
+                        input {
+                            padding-left: 6px;
+                        }
+                    }
+                }
+
+                .error-tips {
+                    margin-top: 5px;
+                    height: 28px;
+                    color: #db3940;
+                    font-size: 14px;
+                    line-height: 28px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    span {
+                        margin-right: 5px;
+                    }
+
+                    em {
+                        font-style: normal;
+                    }
+                }
+
+                .graph-code {
+                    svg {
+                        width: 100%;
+                    }
+                }
+
+                .input,
+                .graph-code,
+                .send-email-validate {
+                    height: 60px;
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: flex-start;
+                    background: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+                    border: 1px solid #fff;
+                    font-size: 16px;
+
+                    &:hover {
+                        span.iconfont {
+                            color: #333;
+                        }
+                    }
+
+                    &.error {
+                        border-color: #db3940;
+                    }
+
+                    span.iconfont {
+                        margin-left: 20px;
+                        color: #676767;
+                        font-size: 18px;
+                        font-weight: bold;
+                        transition: all 0.3s ease-in 0s;
+                    }
+
+                    em.show-password {
+                        margin-right: 6px;
+                        cursor: pointer;
+                    }
+
+                    input {
+                        padding-left: 10px;
+                        height: 100%;
+                        background: none;
+                        border: none;
+                        width: 100%;
+
+                        &::-webkit-input-placeholder {
+                            color: #676767 !important;
+                        }
+
+                        &:-moz-placeholder {
+                            color: #676767 !important;
+                        }
+
+                        &::-moz-placeholder {
+                            color: #676767 !important;
+                        }
+
+                        &:-ms-input-placeholder {
+                            color: #676767 !important;
+                        }
+                    }
+                }
+
+                .tips {
+                    margin-top: 10px;
+                    color: #676767;
+                    font-size: 14px;
+                    text-align: right;
+
+                    a {
+                        color: #676767;
+                    }
+                }
+            }
+
+            .submit {
+                margin-top: 40px;
+                display: flex;
+                justify-content: center;
+
+                button {
+                    color: #fff;
+                    font-size: 16px;
+                    background-image: linear-gradient(90deg, #3f91f7 55%, #63b7e3 70%, #88e2e1 95%, #87ddd0);
+                    background-size: 200%;
+                    background-position: 100% 0;
+                    border: none;
+                    border-radius: 6px;
+                    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+                    line-height: 46px;
+                    padding: 0 36px;
+                    cursor: pointer;
+                    transition: background 0.3s ease 0s;
+
+                    &:hover {
+                        background-position: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .sign-more {
+        position: absolute;
+        bottom: 10%;
+        display: flex;
+        width: 100%;
+        flex-flow: column;
+        align-items: center;
+        font-size: 14px;
+        z-index: 2;
+
+        a {
+            color: #3f91f7;
+
+            &.go-home {
+                margin-top: 10px;
+                color: #c9c9ca;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .signin-wrapper {
+        min-height: auto;
+
+        .sign-box {
+            .sign-content {
+                width: 320px;
+
+                .item {
+                    width: 100%;
+
+                    &.graph-validate {
+                        .input-wrapper {
+                            .input {
+                                width: 200px;
+                            }
+
+                            .graph-code {
+                                width: 100px;
+                            }
+                        }
+                    }
+
+                    &.eamil-validate {
+                        .input-wrapper {
+                            .input {
+                                width: 200px;
+                            }
+
+                            .send-email-validate {
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .sign-more {
+            bottom: 32px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .signin-wrapper {
+        .sign-box {
+            .sign-content {
+                width: 280px;
+
+                .item {
+                    &.graph-validate {
+                        .input-wrapper {
+                            .input {
+                                width: 160px;
+                            }
+
+                            .graph-code {
+                                width: 100px;
+                            }
+                        }
+                    }
+
+                    &.eamil-validate {
+                        .input-wrapper {
+                            .input {
+                                width: 160px;
+                            }
+
+                            .send-email-validate {
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

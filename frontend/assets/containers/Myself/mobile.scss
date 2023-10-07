@@ -1,0 +1,79 @@
+@import '../../public/css/cssVariable.scss';
+
+@media only screen and (max-width: 768px) {
+    .category-wrapper {
+        @include searchVarMob;
+        @include iconVarMob;
+        @include levelVarMob;
+
+        padding: calc(var(--search__level__padding__top) + var(--search__size) + var(--search__level__padding__bottom) + var(--level__size) + 20px) 12px 0;
+
+        .search-level {
+            padding-top: var(--search__level__padding__top);
+            width: calc(100% - 24px) !important;
+
+            &:after {
+                border-radius: 0;
+            }
+
+            .search-padding {
+                padding-bottom: var(--search__level__padding__bottom);
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            .website-category-title-scroll {
+                .website-category-title {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                }
+            }
+        }
+
+        .category-content {
+            .website-category-list-padding {
+                .website-category-list {
+                    z-index: 0;
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+
+                    .add-website {
+                        height: 64px !important;
+
+                        span {
+                            font-size: 40px !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .category-prev-wrapper,
+        .category-next-wrapper {
+            left: -16px !important;
+
+            .category-prev,
+            .category-next {
+                justify-content: flex-end;
+
+                span {
+                    margin-right: 2px;
+                }
+            }
+        }
+
+        .category-next-wrapper {
+            left: initial !important;
+            right: -16px !important;
+
+            .category-next {
+                justify-content: flex-start;
+
+                span {
+                    margin-right: 0;
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+}

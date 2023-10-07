@@ -1,0 +1,172 @@
+@import '../../../public/css/themes/themeify.scss';
+
+.search-website-wrapper {
+    .popup-content {
+        padding: 0 !important;
+
+        .popup-close {
+            top: 2px;
+            right: 10px;
+        }
+    }
+}
+
+.search-website-box {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    @include themeify {
+        color: themed('block-font-color');
+    }
+
+    .search-website-left {
+        padding: 16px 0 24px;
+        width: 200px;
+
+        @include themeify {
+            background: themed('block-bg-color');
+        }
+
+        .first-level {
+            display: flex;
+            align-items: center;
+            padding: 0 8px 0 32px;
+            transition: all 0.3s ease-in-out 0s;
+            font-weight: bold;
+            height: 48px;
+
+            &:hover {
+                @include themeify {
+                    background: themed('block-on-popup-item-hover');
+                }
+            }
+
+            .form-item-button {
+                width: 100%;
+
+                h5 {
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    &:before {
+                        background: none;
+                    }
+                }
+            }
+        }
+
+        .second-level {
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            a {
+                padding-left: 32px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-size: 16px;
+                transition: all 0.3s ease-in-out 0s;
+
+                &:hover,
+                &.active {
+                    background: #3f91f7;
+                    color: #fff;
+                }
+
+                span {
+                    margin-right: 8px;
+                }
+
+                i {
+                    font-size: 14px;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+
+    .search-website-right {
+        position: relative;
+        padding: 24px;
+        height: 100%;
+        width: 720px;
+
+        .search-level-popup {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .default-button {
+                margin: 0;
+            }
+
+            .add-to-level {
+                padding: 0 12px;
+                display: flex;
+                align-items: center;
+                height: 40px;
+                width: 230px;
+                border-radius: 5px;
+
+                @include themeify {
+                    background: themed('block-bg-color-hover');
+                }
+
+                .form-item-button {
+                    width: 100%;
+
+                    &:hover {
+                        &:before {
+                            background: none;
+                        }
+                    }
+                }
+            }
+
+            .search-engine-wrapper {
+                .search-engine {
+                    margin: 0;
+                    height: 40px;
+                    width: 320px !important;
+                    min-width: auto;
+                    padding: 0 12px 0 4px;
+                    box-shadow: none !important;
+
+                    @include themeify {
+                        background: themed('block-bg-color-hover');
+                    }
+
+                    input {
+                        font-size: 14px;
+                    }
+
+                    .iconfont {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        .website-category-list-wrapper {
+            margin-top: 16px;
+            height: 450px;
+
+            .website-category-list {
+                overflow: hidden;
+                margin-top: 0;
+                border-radius: 5px;
+
+                .website-item-wrapper {
+                    box-shadow: none !important;
+                }
+            }
+        }
+
+        .websie-pagination {
+            margin-top: 0;
+        }
+    }
+}

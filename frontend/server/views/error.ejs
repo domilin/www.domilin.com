@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOMILIN 哆咪书签</title>
+    <meta
+      name="keywords"
+      content="哆咪书签,哆咪收藏,哆咪主页,哆咪自定义主页,哆咪个性主页,哆咪新标签页,哆咪起始页,哆咪网址导航"
+    />
+    <meta
+      name="description"
+      content="哆咪书签-应用随处可用：手机、平板、PC、浏览器扩展多端适用，随心自定义个性主页"
+    />
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta name="force-rendering" content="webkit" />
+    <link rel="icon" href="/resource/images/favicon.ico" type="image/x-ico" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+
+      .error-warp {
+        font-size: 12px;
+        color: #2e2e30;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 262px;
+        height: 312px;
+        margin-left: -131px;
+        margin-top: -156px;
+      }
+
+      .error-warp a {
+        color: #2e2e30;
+      }
+
+      .error-warp p {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error-warp">
+      <img src="/resource/images/404.png" />
+      <p>抱歉，页面似乎被抓去火星了</p>
+      <a href="/">返回首页</a>
+    </div>
+
+    <div style="display: none">
+      <h1><%= message %></h1>
+      <h2><%= error.status %></h2>
+      <pre><%= error.stack %></pre>
+    </div>
+
+    <!--统计代码-->
+    <!--baidu-->
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?d70f8822d1ff168453d5ea7b3e359297";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+    <!--友盟-->
+    <div style="display: none">
+      <script
+        type="text/javascript"
+        src="https://s22.cnzz.com/z_stat.php?id=1272858809&web_id=1272858809"
+      ></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+@import '../../../public/css/themes/themeify.scss';
+
+.standby-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2000;
+    transition: all 0.5s ease-out 0s;
+    overflow: hidden;
+
+    @include themeify {
+        background: themed('standby-bg');
+    }
+
+    &.scroll-hide {
+        transform: translateY(-100vh);
+    }
+
+    span,
+    em {
+        text-align: center;
+
+        @include themeify {
+            color: themed('standby-color');
+            text-shadow: 0 8px 12px themed('standby-shadow');
+        }
+    }
+
+    .standby-content-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 8;
+        display: flex;
+        flex-direction: column;
+
+        &:before {
+            content: '';
+            flex: 1 1 0;
+            flex-basis: 0;
+            flex-grow: 1;
+            flex-shrink: 1;
+            height: 20vh;
+            display: block;
+        }
+
+        .standby-content {
+            margin: 36px 0;
+            flex: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .standby-time {
+                font-size: 142px;
+            }
+
+            .standby-date {
+                margin-top: 16px;
+                font-size: 18px;
+                font-weight: normal;
+                font-style: normal;
+
+                span {
+                    display: block;
+
+                    &.lunar {
+                        font-size: 12px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+
+            .stanby-weather-wrapper {
+                margin-top: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .standy-temperature {
+                    margin-left: 16px;
+                }
+
+                span {
+                    display: block;
+                    font-size: 48px;
+                    height: 48px;
+                }
+
+                em {
+                    display: block;
+                    margin-top: 8px;
+                    font-size: 14px;
+                    font-style: normal;
+                }
+            }
+        }
+
+        .standby-scroll-button {
+            opacity: 0.8;
+            flex: 1 1 12vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+
+            .scroll-button {
+                margin-bottom: 12vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    margin-bottom: 8px;
+                    font-size: 24px;
+                }
+
+                em {
+                    font-style: normal;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .standby-wrapper {
+        .standby-content-wrapper {
+            &:before {
+                height: 16vh;
+            }
+
+            .standby-content {
+                margin: 20px 0;
+
+                .standby-time {
+                    font-size: 80px;
+                }
+
+                .standby-date {
+                    margin-top: 8px;
+                    font-size: 14px;
+                }
+
+                .stanby-weather-wrapper {
+                    margin-top: 24px;
+
+                    .standy-temperature {
+                        margin-left: 12px;
+                    }
+
+                    span {
+                        font-size: 32px;
+                        height: 32px;
+                    }
+
+                    em {
+                        margin-top: 6px;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .standby-scroll-button {
+                flex: 1 1 10vh;
+
+                .scroll-button {
+                    margin-bottom: 8vh;
+
+                    span {
+                        margin-bottom: 6px;
+                        font-size: 18px;
+                    }
+
+                    em {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

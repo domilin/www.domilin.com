@@ -1,0 +1,115 @@
+.article-content {
+    position: relative;
+    margin-bottom: 32px;
+    overflow: hidden;
+    z-index: 0;
+
+    &.active {
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin-bottom: 0;
+        overflow: hidden;
+        z-index: 666;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include themeify {
+            background: themed('fullscreen-bg');
+        }
+
+        .article-content-box {
+            position: fixed;
+            top: 0;
+            height: 100%;
+            width: 1000px;
+
+            .ql-toolbar.ql-snow {
+                @include themeify {
+                    background: themed('fullscreen-header');
+                    border-color: themed('fullscreen-border-color');
+                    border-top: none;
+                }
+            }
+
+            .ql-editor,
+            .ql-editor.ql-blank {
+                height: calc(100% - 40px);
+                border-bottom: none;
+
+                @include themeify {
+                    background: themed('fullscreen-conteng-bg');
+                    border-color: themed('fullscreen-border-color');
+                }
+            }
+        }
+    }
+
+    .ql-toolbar.ql-snow,
+    .ql-toolbar.ql-snow + .ql-container.ql-snow {
+        border: none;
+    }
+
+    .ql-snow .ql-stroke {
+        @include themeify {
+            stroke: themed('font-color-white-grey');
+        }
+    }
+
+    .ql-snow .ql-fill,
+    .ql-snow .ql-stroke.ql-fill {
+        @include themeify {
+            fill: themed('font-color-white-grey');
+        }
+    }
+
+    .ql-snow .ql-picker {
+        @include themeify {
+            color: themed('font-color-white-grey');
+        }
+    }
+
+    .ql-snow .ql-picker-options {
+        @include themeify {
+            background: themed('block-bg-not-transparency');
+            border: 1px solid themed('border-color');
+        }
+    }
+
+    .ql-toolbar.ql-snow {
+        .ql-fullscreen-formats {
+            margin: 0;
+            float: right;
+
+            svg path {
+                @include themeify {
+                    fill: themed('font-color-white-grey');
+                }
+            }
+        }
+
+        @include themeify {
+            color: themed('font-color-white-grey');
+            background: themed('block-bg-color-hover');
+            border: 1px solid themed('border-color');
+            border-bottom: none;
+        }
+    }
+
+    .ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label {
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .article-content {
+        &.active {
+            .article-content-box {
+                max-width: 100%;
+            }
+        }
+    }
+}

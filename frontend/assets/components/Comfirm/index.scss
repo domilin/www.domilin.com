@@ -1,0 +1,78 @@
+@import '../../public/css/themes/themeify.scss';
+
+.domilin-comfirm {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+
+    @include themeify {
+        background: themed('comfirm-bg');
+    }
+
+    .domilin-comfirm-wrapper {
+        min-width: 480px;
+        border-radius: 5px;
+        overflow: hidden;
+
+        @include themeify {
+            box-shadow: 0 0 8px themed('comfirm-shadow');
+            background: themed('block-bg-not-transparency');
+            color: themed('block-font-color');
+        }
+
+        .domilin-comfirm-header {
+            padding: 0 16px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include themeify {
+                background: themed('comfirm-bg-header');
+            }
+
+            .comfirm-title {
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .comfirm-close {
+                cursor: pointer;
+                font-weight: bold;
+                transition: all 0.3s ease-in-out 0s;
+
+                &:hover {
+                    @include themeify {
+                        color: themed('block-font-color-hover');
+                    }
+                }
+            }
+        }
+
+        .domilin-comfirm-content {
+            padding: 32px 16px 16px;
+
+            @include themeify {
+                color: themed('block-font-color-hover');
+            }
+        }
+
+        .domilin-comfirm-footer {
+            padding: 0 16px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            button {
+                margin-right: 0;
+            }
+        }
+    }
+}

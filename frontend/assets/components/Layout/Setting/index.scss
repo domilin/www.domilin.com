@@ -1,0 +1,131 @@
+@import '../../../public/css/themes/themeify.scss';
+
+.setting-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 480px;
+    width: 800px;
+    overflow: hidden;
+
+    .setting-func {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .setting-menu {
+        width: 140px;
+
+        a {
+            padding: 8px 16px;
+            display: block;
+            font-size: 14px;
+            line-height: 1.3;
+            transition: all 0.3s ease 0s;
+
+            @include themeify {
+                color: themed('block-font-color');
+            }
+
+            &:hover {
+                @include themeify {
+                    background: themed('block-bg-color-hover');
+                }
+            }
+
+            &.active {
+                @include themeify {
+                    background: #1890ff !important;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .block-content {
+        padding: 0 16px 24px;
+        height: 100%;
+        box-sizing: border-box;
+        width: calc(100% - 140px);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .setting-content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .setting-popup {
+        .popup-content {
+            padding: 0 !important;
+            border-radius: 0 !important;
+            overflow: hidden !important;
+            height: 100%;
+            min-height: 100%;
+        }
+    }
+
+    .setting-popup-box {
+        display: block;
+        padding-top: 28px;
+        width: 100vw;
+        height: 100%;
+        overflow: hidden;
+
+        .setting-wrapper {
+            display: block !important;
+            height: 100%;
+            width: 100%;
+
+            .setting-menu {
+                padding: 0 16px;
+                margin-bottom: 8px;
+                width: calc(100% - 32px);
+            }
+
+            .block-content {
+                padding: 0;
+                height: calc(100% - 34px * 5 - 28px - 16px - 8px);
+                width: 100%;
+                overflow: hidden;
+                padding-right: 0 !important;
+
+                .setting-content {
+                    height: 100%;
+                    display: block !important;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    border-radius: 7px;
+
+                    .block-on-popup {
+                        margin: 16px;
+                    }
+                }
+
+                .setting-normal {
+                    display: block;
+                    width: 100%;
+                }
+
+                .icon-wrapper,
+                .level-wrapper,
+                .layout-wrapper,
+                .setting-standby-wrapper,
+                .slide-wrapper,
+                .search-wrapper,
+                .setting-normal,
+                .setting-normal-content,
+                .theme-wrapper,
+                .wallpaper-wrapper {
+                    margin: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

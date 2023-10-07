@@ -1,0 +1,39 @@
+@import '../../public/css/themes/themeify.scss';
+
+.form-switch-wrapper {
+    position: relative;
+    user-select: none;
+    padding: 2px;
+    height: 12px;
+    width: 22px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out 0s;
+
+    @include themeify {
+        background: themed('grey-white-bg');
+    }
+
+    .form-switch-button {
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out 0s;
+
+        @include themeify {
+            background: themed('block-bg-color');
+        }
+    }
+
+    &.active {
+        .form-switch-button {
+            @include themeify {
+                background: #1890ff;
+            }
+
+            left: 12px;
+        }
+    }
+}

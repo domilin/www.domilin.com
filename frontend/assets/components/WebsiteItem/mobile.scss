@@ -1,0 +1,7 @@
+@import './iconClassic.scss';
+
+@media only screen and (max-width: 768px) {
+    .website-item-wrapper {
+        @include iconClassic;
+    }
+}

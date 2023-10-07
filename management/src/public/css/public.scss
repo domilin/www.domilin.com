@@ -1,0 +1,38 @@
+/* iconfont */
+@font-face {
+  font-family: "iconfont";
+  src: url("../../public/fonts/iconfont.eot");
+  src: url("../../public/fonts/iconfont.eot?#iefix") format("embedded-opentype"),
+    url("../../public/fonts/iconfont.woff2") format("woff2"), url("../../public/fonts/iconfont.woff") format("woff"),
+    url("../../public/fonts/iconfont.ttf") format("truetype"),
+    url("../../public/fonts/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont", sans-serif !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// table列表项(编辑，删除等)
+.operation {
+  button {
+    margin-right: 10px;
+  }
+}
+
+// 搜索过滤条件样式
+.filter-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+// 设置浏览器input默认颜色为透明
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.65) !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}

@@ -1,0 +1,5 @@
+/browser/registerServiceWorker.js
+/static/*
+/config/*
+/assets/public/proto/message.js
+/server/routes/signture/jssha.js

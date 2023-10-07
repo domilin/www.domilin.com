@@ -1,0 +1,61 @@
+@import '../../../../public/css/themes/themeify.scss';
+
+.layout-wrapper,
+.setting-standby-wrapper {
+    width: 50%;
+}
+
+.setting-standby-wrapper {
+    margin-left: 16px;
+
+    .city-select {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        em {
+            margin-right: 2px;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: block;
+        }
+    }
+
+    .weather-city-select {
+        position: relative;
+
+        .city-dropdown {
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            border-radius: 5px;
+            max-height: 160px;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            @include themeify {
+                box-shadow: 0 8px 12px themed('block-on-popup-box-shadow');
+                background: themed('block-bg-not-transparency');
+                color: themed('block-font-color');
+            }
+
+            .dropdwon-item {
+                padding: 0 12px;
+                line-height: 40px;
+                text-align: left;
+                font-size: 14px;
+                cursor: pointer;
+
+                &:hover {
+                    @include themeify {
+                        background: themed('block-bg-color-hover');
+                    }
+                }
+            }
+        }
+    }
+}

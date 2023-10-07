@@ -1,0 +1,78 @@
+@import '../../public/css/themes/themeify.scss';
+
+.more-wrapper {
+    .more-menu {
+        width: 180px;
+
+        a {
+            padding: 8px 16px 8px 32px;
+            display: block;
+            font-size: 14px;
+            line-height: 1.3;
+            transition: all 0.3s ease 0s;
+
+            @include themeify {
+                color: themed('block-font-color');
+            }
+
+            &:hover {
+                @include themeify {
+                    background: themed('block-bg-color-hover');
+                }
+            }
+
+            &.active {
+                @include themeify {
+                    background: #1890ff !important;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .block-content {
+        padding: 0 16px 16px 16px;
+        box-sizing: border-box;
+        width: calc(100% - 180px);
+
+        .setting-content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .more-wrapper {
+        display: block;
+
+        .more-menu {
+            padding-bottom: 0;
+            margin-bottom: 20px;
+            width: 100%;
+            display: none;
+        }
+
+        .block-content {
+            padding: 12px;
+            width: 100%;
+
+            .more-content {
+                display: block !important;
+            }
+
+            .more-normal {
+                display: block;
+                width: 100%;
+            }
+
+            .setting-normal-content,
+            .protocol-wrapper,
+            .contact-wrapper {
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+@import '../../../../../../public/css/themes/themeify.scss';
+
+.bookmark-tree-wrapper {
+    .bookmark-tree-children,
+    .bookmark-tree-item {
+        margin-left: 16px;
+    }
+
+    .bookmark-tree-item,
+    .bookmark-tree-folder {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 14px;
+        margin-bottom: 8px;
+        overflow: hidden;
+        height: 22px;
+        cursor: pointer;
+
+        .checkbox-icon {
+            font-size: 20px;
+            margin-right: 2px;
+            opacity: 0.8;
+        }
+
+        .foloder-icon {
+            margin-top: 2px;
+            margin-right: 4px;
+            font-size: 22px;
+            opacity: 0.8;
+        }
+
+        .bookmark-icon {
+            margin-right: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 22px;
+
+            &.network-icon {
+                opacity: 0.72;
+            }
+
+            img {
+                width: 80%;
+            }
+        }
+
+        em,
+        a {
+            font-style: normal;
+            font-size: 14px;
+            line-height: 24px;
+            width: 360px;
+            overflow: hidden;
+
+            /* 文本不会换行 */
+            white-space: nowrap;
+
+            /* 当文本溢出包含元素时，以省略号表示超出的文本 */
+            text-overflow: ellipsis;
+            transition: all 0.3s ease 0s;
+        }
+
+        a {
+            @include themeify {
+                color: themed('block-font-color');
+            }
+
+            &:hover {
+                color: #1890ff !important;
+            }
+        }
+    }
+}

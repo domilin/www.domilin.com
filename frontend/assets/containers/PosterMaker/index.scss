@@ -1,0 +1,207 @@
+@import "../../public/css/normalize";
+@import "../../public/css/public";
+@import '../../public/css/themes/themeify.scss';
+@import '../../components//Website/index.scss';
+
+html,
+body,
+#root,
+.poster-maker {
+    height: 100%;
+    overflow: hidden;
+}
+
+.layout-wrapper {
+    position: fixed;
+    z-index: 0;
+}
+
+.poster-maker {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+
+    @include themeify {
+        background: themed('block-bg-color');
+        color: themed('block-font-color');
+    }
+
+    .poster-show {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: calc(100% - 400px);
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        img {
+            max-width: 100%;
+        }
+
+        .poster-image-wrapper {
+            position: relative;
+            overflow: hidden;
+
+            img {
+                position: relative;
+                z-index: 0;
+            }
+
+            .poster-type-item {
+                position: absolute;
+                left: 0;
+                top: 0;
+                text-align: left;
+                font-size: 24px;
+                color: #000;
+            }
+        }
+    }
+
+    .poster-setting {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        @include themeify {
+            background: themed('block-bg-not-transparency');
+        }
+
+        .add-intro-type {
+            padding: 0 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .form-item {
+                padding-top: 0;
+                margin: 0 18px 0 0;
+                width: 190px;
+            }
+
+            button {
+                margin: 0;
+            }
+        }
+
+        .upload-image,
+        .upload-font {
+            input {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 10;
+                height: 110%;
+                width: 110%;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+
+        .website-category-title {
+            margin-bottom: 0;
+            padding: 10px 12px 0;
+
+            .title {
+                position: relative;
+                margin: 0 10px 10px 0;
+                cursor: pointer;
+                transition: all 0.3s ease 0s;
+
+                @include themeify {
+                    color: themed('block-font-color');
+                    background: themed('block-bg-color-hover');
+                }
+
+                &.active,
+                &:hover {
+                    background: #3f91f7 !important;
+                    color: #fff !important;
+                }
+
+                &.add-title {
+                    padding: 0 10px;
+                    opacity: 0.5;
+
+                    @include themeify {
+                        color: themed('block-font-color');
+                        background: themed('block-bg-color-hover');
+                    }
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    span {
+                        margin: 0;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    .poster-tips {
+        padding: 16px 12px 8px;
+        font-size: 14px;
+
+        @include themeify {
+            color: themed('block-font-color');
+        }
+    }
+
+    .poster-made {
+        max-height: 340px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .poster-made-list {
+            a {
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                z-index: 99;
+            }
+        }
+    }
+
+    .sure-done {
+        padding: 10px 0 40px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .layout-wrapper,
+    .layout-background,
+    .layout-header-menu {
+        display: none;
+    }
+
+    .poster-maker {
+        position: inherit;
+        display: block;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .poster-show,
+        .poster-setting {
+            height: auto;
+            width: 100%;
+            position: inherit;
+            left: inherit;
+            top: inherit;
+        }
+    }
+}

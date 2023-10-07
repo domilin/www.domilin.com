@@ -1,0 +1,177 @@
+@import '../../public/css/themes/themeify.scss';
+@import '../../public/css/cssVariable.scss';
+
+.search-engine-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-engine {
+    position: relative;
+    border-radius: var(--search__radius);
+    height: var(--search__size);
+    padding: 0 20px 0 0;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    min-width: 20%;
+    justify-content: space-between;
+    z-index: 100;
+
+    @include themeify {
+        background: themed('block-bg-color');
+        box-shadow: 0 0 10px 0 themed('box-shadow');
+    }
+
+    .engine {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        @include themeify {
+            color: themed('block-font-color');
+        }
+
+        $enginesize: calc(var(--search__size) * 24 / 56);
+
+        a {
+            font-size: $enginesize;
+        }
+
+        .current-engine {
+            padding-left: 20px;
+            position: relative;
+            font-size: $enginesize;
+            width: calc(var(--search__size) * 0.6);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            &:after {
+                content: '';
+                margin-top: -2px;
+                position: absolute;
+                top: 50%;
+                left: calc(var(--search__size) * 24 / 56 + 4px + 20px);
+                border: 3px solid transparent;
+                width: 0;
+                height: 0;
+                opacity: 0.6;
+
+                @include themeify {
+                    border-top: 5px solid themed('block-font-color');
+                }
+            }
+        }
+
+        .engine-more {
+            border-radius: var(--search__more__radius);
+            top: var(--search__size);
+            position: absolute;
+            left: 0;
+            display: none;
+            overflow: hidden;
+
+            @include themeify {
+                background: themed('block-bg-not-transparency');
+            }
+
+            .engine-more-item {
+                padding: 12px 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                text-transform: capitalize;
+
+                &.engine-360 {
+                    span {
+                        font-size: 24px;
+                    }
+                }
+
+                &.engine-google {
+                    span {
+                        font-size: 21px;
+                    }
+                }
+
+                &:hover {
+                    @include themeify {
+                        background: themed('block-bg-color-hover');
+                    }
+                }
+
+                span {
+                    margin-bottom: 4px;
+                    font-size: 20px;
+                }
+
+                em {
+                    font-size: 12px;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+
+    input {
+        padding: 0 10px;
+        height: 100%;
+        width: 100%;
+        background: none;
+        border: none;
+        font-size: calc(var(--search__size) * 16 / 56);
+
+        @include themeify {
+            color: themed('block-font-color-hover');
+        }
+    }
+
+    button {
+        background: none;
+        border: none;
+        font-size: calc(var(--search__size) * 22 / 56);
+        cursor: pointer;
+        transition: all 0.2s ease-in 0s;
+
+        @include themeify {
+            color: themed('block-font-color');
+        }
+
+        &:hover {
+            @include themeify {
+                color: themed('block-font-color-hover');
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .search-engine {
+        width: 68% !important;
+        padding: 0 12px 0 0;
+
+        .engine {
+            .current-engine {
+                padding-left: 12px;
+
+                &:after {
+                    left: calc(var(--search__size) * 24 / 56 + 4px + 12px);
+                }
+            }
+
+            .engine-more {
+                flex-direction: column;
+
+                .engine-more-item {
+                    padding: 10px 12px;
+                }
+            }
+        }
+    }
+}

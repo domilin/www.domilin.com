@@ -1,0 +1,53 @@
+@import '../../public/css/themes/themeify.scss';
+
+.block-select-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 102px);
+    row-gap: 12px;
+    column-gap: 24px;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding: 16px 0;
+
+    @include themeify {
+        border-bottom: 1px solid themed('border-color');
+    }
+
+    .block-select-option {
+        cursor: pointer;
+
+        &:hover,
+        &.active {
+            .select-option-content {
+                border-color: #1890ff;
+            }
+
+            .select-option-name {
+                color: #1890ff;
+            }
+        }
+
+        .select-option-content {
+            height: 64px;
+            width: 100px;
+            border-radius: 3px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: all 0.3s ease-in-out 0s;
+
+            img,
+            .select-option-color {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .select-option-name {
+            margin-top: 4px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.3;
+            transition: all 0.3s ease-in-out 0s;
+        }
+    }
+}

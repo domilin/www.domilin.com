@@ -1,0 +1,110 @@
+@import '../../public/css/themes/themeify.scss';
+
+.website-wrapper {
+    .website-category {
+        margin-bottom: 50px;
+    }
+}
+
+.navigation-title {
+    .title {
+        margin: 0 16px 16px 0;
+        transition: all 0.3s ease-in-out 0s;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+            background: #3f91f7 !important;
+            color: #fff !important;
+        }
+    }
+}
+
+.website-category-title {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    > div:first-of-type {
+        .title {
+            @include themeify {
+                /* 隐藏添加按钮，只有一个分类，第一个阴影显示方法优先 */
+                box-shadow: 10px 0 10px 0 themed('box-shadow') !important;
+            }
+        }
+    }
+
+    > div:last-of-type {
+        .title {
+            @include themeify {
+                box-shadow: -10px 0 10px 0 themed('box-shadow');
+            }
+        }
+    }
+
+    > div:first-of-type.add-title {
+        @include themeify {
+            /* 只有添加按钮，一个分类都没有，第一个添加按钮阴影显示方法游侠 */
+            box-shadow: 10px 0 10px 0 themed('box-shadow') !important;
+        }
+    }
+
+    > div:last-of-type.add-title {
+        @include themeify {
+            box-shadow: -10px 0 10px 0 themed('box-shadow');
+        }
+    }
+
+    .title {
+        padding: 0 20px;
+        height: 40px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        white-space: nowrap;
+        transition: all 0.3s ease 0s;
+
+        @include themeify {
+            color: themed('block-font-color');
+            background: themed('block-bg-not-transparency');
+            box-shadow: 0 0 10px 0 themed('box-shadow');
+        }
+
+        span {
+            margin-right: 10px;
+        }
+    }
+}
+
+.website-category-list {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 228px);
+    grid-gap: 16px;
+}
+
+.websie-pagination {
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .website-category-title-scroll {
+        overflow-y: hidden;
+        overflow-x: auto;
+        border-radius: 5px;
+
+        .website-category-title {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-bottom: 0;
+        }
+    }
+
+    .website-category-list {
+        grid-template-columns: repeat(auto-fill, 64px) !important;
+        gap: 24px !important;
+    }
+}

@@ -1,0 +1,74 @@
+.ql-snow .ql-editor {
+    font-size: 16px;
+    line-height: 28px;
+    height: calc(100vh - 450px);
+
+    @include themeify {
+        color: themed('font-color-white-grey');
+        border: 1px solid themed('border-color');
+        border-top: none;
+    }
+
+    p,
+    h2,
+    h3,
+    ul li,
+    ol li,
+    blockquote,
+    pre {
+        margin: 0 0 16px;
+    }
+
+    p,
+    .ql-syntax {
+        margin: 0 0 24px;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        line-height: 36px;
+
+        @include themeify {
+            color: themed('block-font-color-hover');
+        }
+    }
+
+    h3 {
+        font-size: 1.2em;
+        line-height: 32px;
+
+        @include themeify {
+            color: themed('block-font-color-hover');
+        }
+    }
+
+    ul,
+    ol {
+        padding: 0;
+    }
+
+    blockquote {
+        @include themeify {
+            color: themed('block-font-color');
+        }
+    }
+
+    img {
+        max-width: 80%;
+        margin-bottom: 16px;
+    }
+}
+
+.ql-snow .ql-editor.ql-blank:before {
+    @include themeify {
+        color: themed('block-font-color');
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ql-snow .ql-editor {
+        img {
+            max-width: 100%;
+        }
+    }
+}

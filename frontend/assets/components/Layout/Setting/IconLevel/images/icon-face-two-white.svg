@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="60px" viewBox="0 0 96 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>icon-iconLayout2-light</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon-iconLayout2-light" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#1492FF" fill="#1492FF" fill-rule="nonzero" x="0.5" y="0.5" width="95" height="59"></rect>
+        <rect id="Rectangle" fill="#A1D3FF" fill-rule="nonzero" x="22" y="10" width="52" height="8" rx="1"></rect>
+        <rect id="Rectangle" fill="#A1D3FF" fill-rule="nonzero" x="7" y="26" width="16" height="8" rx="2"></rect>
+        <rect id="Rectangle" fill="#A1D3FF" fill-rule="nonzero" x="7" y="40" width="16" height="8" rx="2"></rect>
+        <rect id="Rectangle" fill="#A1D3FF" fill-rule="nonzero" x="29" y="26" width="16" height="8" rx="2"></rect>
+        <rect id="Rectangle" fill="#A1D3FF" fill-rule="nonzero" x="29" y="40" width="16" height="8" rx="2"></rect>
+        <rect id="Rectangle" fill="#A1D3FF" fill-rule="nonzero" x="51" y="26" width="16" height="8" rx="2"></rect>
+        <rect id="Rectangle" fill="#A1D3FF" fill-rule="nonzero" x="51" y="40" width="16" height="8" rx="2"></rect>
+        <rect id="Rectangle" fill="#A1D3FF" fill-rule="nonzero" x="73" y="26" width="16" height="8" rx="2"></rect>
+        <rect id="Rectangle" fill="#A1D3FF" fill-rule="nonzero" x="73" y="40" width="16" height="8" rx="2"></rect>
+        <path d="M9,26 L15,26 L15,26 L15,34 L9,34 C7.8954305,34 7,33.1045695 7,32 L7,28 C7,26.8954305 7.8954305,26 9,26 Z" id="Rectangle" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M9,40 L15,40 L15,40 L15,48 L9,48 C7.8954305,48 7,47.1045695 7,46 L7,42 C7,40.8954305 7.8954305,40 9,40 Z" id="Rectangle" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M31,26 L37,26 L37,26 L37,34 L31,34 C29.8954305,34 29,33.1045695 29,32 L29,28 C29,26.8954305 29.8954305,26 31,26 Z" id="Rectangle" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M31,40 L37,40 L37,40 L37,48 L31,48 C29.8954305,48 29,47.1045695 29,46 L29,42 C29,40.8954305 29.8954305,40 31,40 Z" id="Rectangle" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M53,26 L59,26 L59,26 L59,34 L53,34 C51.8954305,34 51,33.1045695 51,32 L51,28 C51,26.8954305 51.8954305,26 53,26 Z" id="Rectangle" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M53,40 L59,40 L59,40 L59,48 L53,48 C51.8954305,48 51,47.1045695 51,46 L51,42 C51,40.8954305 51.8954305,40 53,40 Z" id="Rectangle" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M75,26 L81,26 L81,26 L81,34 L75,34 C73.8954305,34 73,33.1045695 73,32 L73,28 C73,26.8954305 73.8954305,26 75,26 Z" id="Rectangle" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <path d="M75,40 L81,40 L81,40 L81,48 L75,48 C73.8954305,48 73,47.1045695 73,46 L73,42 C73,40.8954305 73.8954305,40 75,40 Z" id="Rectangle" fill="#FFFFFF" fill-rule="nonzero"></path>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="17" y="28" width="4" height="2" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="17" y="42" width="4" height="2" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="39" y="28" width="4" height="2" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="39" y="42" width="4" height="2" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="61" y="28" width="4" height="2" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="61" y="42" width="4" height="2" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="83" y="28" width="4" height="2" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="83" y="42" width="4" height="2" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="17" y="31" width="4" height="1" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="17" y="45" width="4" height="1" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="39" y="31" width="4" height="1" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="39" y="45" width="4" height="1" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="61" y="31" width="4" height="1" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="61" y="45" width="4" height="1" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="83" y="31" width="4" height="1" rx="0.5"></rect>
+        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="83" y="45" width="4" height="1" rx="0.5"></rect>
+    </g>
+</svg>

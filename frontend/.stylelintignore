@@ -1,0 +1,5 @@
+/static/*
+/assets/public/css/swiper.min.scss
+/assets/public/css/simditor/*
+*.js
+*.jsx

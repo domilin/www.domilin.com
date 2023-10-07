@@ -1,0 +1,110 @@
+@import "../../public/css/loading.scss";
+@import "../../public/css/public.scss";
+
+#root {
+  height: 100%;
+
+  > .ant-layout-has-sider {
+    height: 100%;
+  }
+}
+
+#root .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#root .trigger:hover {
+  color: #1890ff;
+}
+
+#root .logo {
+  background: rgba(255, 255, 255, 0.06);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 32px;
+  }
+}
+
+.ant-layout-sider,
+.site-layout-content,
+.site-layout-header,
+.ant-table,
+.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub {
+  background: #202124 !important;
+}
+.ant-table thead > tr > th {
+  background: #2a2c30 !important;
+}
+
+.ant-layout {
+  background: #151515;
+}
+
+.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  background: #1a1a1a;
+}
+
+.menu-item {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.site-layout {
+  height: 100%;
+
+  .site-layout-nav {
+    padding: 16px 24px;
+  }
+
+  .site-layout-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 24px;
+
+      .user-avatar {
+        background: #177ddc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 80%;
+          height: 80%;
+        }
+      }
+
+      .change-language {
+        margin-left: 32px;
+        cursor: pointer;
+      }
+
+      .user-name {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .site-layout-content {
+    margin: 0 24px;
+    padding: 24px;
+    height: calc(100% - 54px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

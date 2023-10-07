@@ -1,0 +1,23 @@
+.no-match-page {
+  background: #171717;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+
+  h2 {
+    margin: 0;
+    color: #1890ff;
+    font-size: 90px;
+    font-weight: 500;
+    line-height: 100px;
+  }
+
+  p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+}

@@ -1,0 +1,376 @@
+@import './themes/themeify.scss';
+
+/* style reset */
+table {
+    border-collapse: collapse;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+input,
+textarea,
+button,
+td,
+th {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        @extend a;
+    }
+}
+
+div,
+input,
+span,
+button {
+    outline: none;
+}
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/* public */
+html,
+body {
+    font-family: PingFang SC, Lantinghei SC, Helvetica Neue, Helvetica, Arial, Microsoft YaHei, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* input placeholder */
+::-webkit-input-placeholder {
+    @include themeify {
+        color: themed('placeholder-color');
+    }
+}
+
+:-moz-placeholder {
+    @include themeify {
+        color: themed('placeholder-color');
+    }
+}
+
+::-moz-placeholder {
+    @include themeify {
+        color: themed('placeholder-color');
+    }
+}
+
+:-ms-input-placeholder {
+    @include themeify {
+        color: themed('placeholder-color');
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    ::-webkit-input-placeholder {
+        line-height: 1.5em;
+    }
+}
+
+/* beautify scroll */
+* {
+    &::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+    }
+
+    &::-webkit-scrollbar-button {
+        @include themeify {
+            background-color: themed('block-bg-not-transparency');
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        @include themeify {
+            background-color: themed('block-bg-not-transparency');
+        }
+    }
+
+    &::-webkit-scrollbar-track-piece {
+        @include themeify {
+            background-color: themed('block-bg-not-transparency');
+        }
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @include themeify {
+            background-color: themed('scrollbar-bg');
+        }
+
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-corner {
+        @include themeify {
+            background-color: themed('block-bg-not-transparency');
+        }
+    }
+}
+
+.beautify-scroll-transparent {
+    &::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+    }
+
+    &::-webkit-scrollbar-button {
+        @include themeify {
+            background-color: themed('transparent-scroll-bg');
+        }
+    }
+
+    &::-webkit-scrollbar-track {
+        @include themeify {
+            background-color: themed('transparent-scroll-bg');
+        }
+    }
+
+    &::-webkit-scrollbar-track-piece {
+        @include themeify {
+            background-color: themed('transparent-scroll-bg');
+        }
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @include themeify {
+            background-color: themed('transparent-scroll-btn');
+        }
+
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-corner {
+        @include themeify {
+            background-color: themed('transparent-scroll-bg');
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    * {
+        &::-webkit-scrollbar {
+            width: 2px;
+            height: 2px;
+        }
+    }
+}
+
+/* iconfont */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../../public/fonts/iconfont.eot');
+    src:
+        url('../../public/fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../../public/fonts/iconfont.woff2') format('woff2'),
+        url('../../public/fonts/iconfont.woff') format('woff'),
+        url('../../public/fonts/iconfont.ttf') format('truetype'),
+        url('../../public/fonts/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont", sans-serif !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* domilin-loader */
+.domilin-loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.domilin-loader-content {
+    position: relative;
+    height: 80px;
+    width: 80px;
+}
+
+.domilin-loader-content div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #3f91f7;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.domilin-loader-content div:nth-child(1) {
+    left: 8px;
+    animation: domilin-loader1 0.6s infinite;
+}
+
+.domilin-loader-content div:nth-child(2) {
+    left: 8px;
+    animation: domilin-loader2 0.6s infinite;
+}
+
+.domilin-loader-content div:nth-child(3) {
+    left: 32px;
+    animation: domilin-loader2 0.6s infinite;
+}
+
+.domilin-loader-content div:nth-child(4) {
+    left: 56px;
+    animation: domilin-loader3 0.6s infinite;
+}
+
+@keyframes domilin-loader1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes domilin-loader3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes domilin-loader2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(24px, 0);
+    }
+}
+
+/* 内容模块样式
+<div className="block-wrapper">
+    <div className="block-list">
+        list
+    </div>
+    <div className="block-content">
+        content
+    </div>
+</div> */
+.block-wrapper {
+    margin: 40px;
+    border-radius: 5px;
+    padding: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    height: calc(100vh - 160px);
+
+    @include themeify {
+        background: themed('block-bg-not-transparency');
+        color: themed('block-font-color');
+    }
+
+    .block-list {
+        flex-shrink: 0;
+        width: 300px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+    }
+
+    .block-content {
+        width: calc(100% - 320px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .block-wrapper {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border-radius: 0;
+        display: block;
+        flex-direction: column-reverse;
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .block-list {
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            height: auto;
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: initial;
+
+            @include themeify {
+                background: themed('block-bg-color');
+                box-shadow: 0 0 10px 0 themed('box-shadow-hover');
+            }
+        }
+
+        .block-content {
+            padding: 8px 8px 80px;
+            height: auto;
+            width: calc(100% - 16px);
+            overflow-x: hidden;
+            overflow-y: inherit;
+        }
+    }
+}
+
+/*
+当图片宽度设置100%时，图片显示模糊问题
+添加此className="img-clear-blur"
+或继承 img { @extend .img-clear-blur; }
+*/
+.img-clear-blur {
+    image-rendering: -moz-crisp-edges; /* Firefox */
+    image-rendering: -o-crisp-edges; /* Opera */
+    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+}

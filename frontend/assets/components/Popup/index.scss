@@ -1,0 +1,77 @@
+@import '../../public/css/themes/themeify.scss';
+
+.popup-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+
+    .popup-mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.6);
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .popup-content {
+        z-index: 1;
+        padding: 32px;
+        position: relative;
+        border-radius: 7px;
+        overflow: hidden;
+
+        @include themeify {
+            background: themed('block-bg-not-transparency');
+        }
+
+        .popup-close {
+            position: absolute;
+            right: 12px;
+            top: 5px;
+            height: 20px;
+            width: 20px;
+            cursor: pointer;
+            font-size: 32px;
+            font-weight: bold;
+            line-height: 20px;
+            text-align: center;
+            transition: color 0.3s ease-in 0s, opacity 0.3s ease-in 0s, font-weight 0.3s ease-in 0s;
+            z-index: 8999;
+            opacity: 0.6;
+
+            @include themeify {
+                color: themed('block-font-color');
+            }
+
+            &:hover {
+                opacity: 1;
+
+                @include themeify {
+                    color: themed('font-color-white-grey');
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .popup-wrapper {
+        display: block;
+        overflow-y: auto;
+
+        .popup-content {
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 16px;
+            max-height: calc(100vh - 32px);
+        }
+    }
+}

@@ -1,0 +1,159 @@
+@import '../../../../public/css/themes/themeify.scss';
+
+$iconRadius: calc(var(--icon__radius) / 2);
+$iconHeight: calc(var(--icon__size) * 32 / 86);
+
+@mixin iconClassic {
+    .website-item-list {
+        grid-template-columns: repeat(auto-fill, 46.6%);
+
+        .website-item-wrapper {
+            .website-item-icon {
+                border-radius: $iconRadius;
+            }
+
+            .website-item-info {
+                display: none;
+            }
+        }
+    }
+
+    .website-folder-name {
+        display: block;
+    }
+}
+
+.website-folder-close {
+    position: relative;
+    transition: transform 0.3s ease 0s, opacity 0.3s ease 0s;
+
+    .website-item-list {
+        border-radius: var(--icon__radius);
+        padding: calc(var(--icon__size) * 8 / 86);
+        height: var(--icon__size);
+        width: 100%;
+        box-sizing: border-box;
+        align-content: space-between;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 48.4%);
+        grid-gap: calc(var(--icon__size) * 4 / 86);
+
+        @include themeify {
+            box-shadow: 0  8px 12px 0 themed('box-shadow');
+            background: themed('block-bg-color');
+        }
+
+        .website-item-wrapper {
+            height: $iconHeight;
+            border-radius: $iconRadius;
+            width: 100%;
+            box-shadow: none !important;
+
+            .website-item-icon {
+                height: $iconHeight;
+                width: $iconHeight;
+                border-top-left-radius: $iconRadius;
+                border-bottom-left-radius: $iconRadius;
+                box-shadow: none !important;
+
+                .icon-character {
+                    font-size: calc(var(--icon__size) * 18 / 86);
+                    line-height: $iconHeight;
+                    padding: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .website-item-info {
+                padding: 0 calc(var(--icon__text__size) * 4 / 14) 0 calc(var(--icon__text__size) * 8 / 14);
+
+                .website-item-name {
+                    font-size: calc(var(--icon__text__size) * 12 / 14);
+                    font-weight: normal;
+                }
+
+                .website-item-intro {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .website-folder-name {
+        margin-top: calc(var(--icon__text__size) * 6 / 14);
+        font-size: var(--icon__text__size);
+        display: none;
+        text-align: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        line-height: 1.3;
+
+        @include themeify {
+            color: themed('icon-classic-text-color');
+        }
+    }
+
+    .website-add-folder-bg {
+        border-radius: var(--icon__radius);
+        height: var(--icon__size);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+
+        @include themeify {
+            background: themed('folder-add-bg');
+        }
+    }
+
+    .website-folder-drop-sort,
+    .website-folder-drop-folder {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        background: none;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .website-folder-drop-folder {
+        left: inherit;
+        right: 0;
+    }
+
+    &.add-to-folder {
+        .website-add-folder-bg {
+            left: -6px;
+            top: -6px;
+            opacity: 1;
+            height: calc(var(--icon__size) + 12px);
+            width: calc(100% + 12px);
+        }
+    }
+
+    &.icon-classic,
+    &.icon-light {
+        @include iconClassic();
+    }
+
+    &.icon-light {
+        .website-folder-name {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .website-folder-close {
+        @include iconClassic();
+    }
+}

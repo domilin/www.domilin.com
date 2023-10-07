@@ -1,0 +1,25 @@
+@import '../../public/css/cssVariable.scss';
+
+.nav-career-wrapper {
+    @include iconVar;
+    @include searchVar;
+    @include careerArticleSearchStyle;
+
+    padding: 0 120px 60px;
+    width: calc(100% - 240px);
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-career-wrapper {
+        @include searchVarMob;
+        @include iconVarMob;
+        @include careerArticleSearchStyleMob;
+
+        padding: 0 12px 60px;
+        width: calc(100% - 24px);
+
+        .website-category-list {
+            margin-top: 24px;
+        }
+    }
+}

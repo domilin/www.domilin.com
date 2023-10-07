@@ -1,0 +1,123 @@
+@import '../../../../../public/css/themes/themeify.scss';
+@import '~rc-tree/assets/index.css';
+
+.import-export {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 6666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include themeify {
+        background: themed('folder-add-bg');
+    }
+
+    .import-export-mask {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+    }
+
+    .import-export-content {
+        padding: 36px;
+        margin: 32px 0;
+        z-index: 1;
+        overflow: hidden;
+
+        @include themeify {
+            box-shadow: 0 0 18px themed('box-shadow-hover');
+        }
+
+        .block-body {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+
+            .content-title {
+                margin-top: 8px;
+                margin-bottom: 24px;
+                padding-bottom: 16px;
+                font-size: 18px;
+                font-weight: normal;
+                opacity: 0.7;
+
+                .checked-bookmark {
+                    &.error {
+                        color: #db3940;
+                    }
+                }
+
+                @include themeify {
+                    border-bottom: 1px solid themed('border-color');
+                }
+            }
+
+            .form-bookmark {
+                padding-right: 40px;
+                margin-right: 40px;
+
+                .tree-wrapper {
+                    margin-left: -16px;
+                    margin-top: -4px;
+                    min-width: 560px;
+                    height: 332px;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                }
+            }
+
+            .to-my-website {
+                .my-website-levels {
+                    height: 332px;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+
+                    .add-level-tips {
+                        width: 100%;
+                        font-size: 14px;
+                        text-align: center;
+
+                        @include themeify {
+                            color: themed('block-font-color');
+                        }
+                    }
+
+                    .level-item {
+                        margin: 0 10px 10px 0;
+                        padding: 0 16px;
+                        height: 32px;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        border-radius: 3px;
+                        cursor: pointer;
+                        transition: all 0.3s ease 0s;
+
+                        @include themeify {
+                            color: themed('grey-white-bg-clolor');
+                            background: themed('grey-white-bg');
+                        }
+
+                        &.active,
+                        &:hover {
+                            background: #3f91f7 !important;
+                            color: #fff !important;
+                        }
+
+                        span {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

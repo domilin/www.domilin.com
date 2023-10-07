@@ -1,0 +1,52 @@
+{
+  "name": "__MSG_extension_name__",
+  "version": "1.133",
+  "description": "__MSG_extension_desc__",
+  "default_locale": "zh_CN",
+  "manifest_version": 2,
+  "permissions": [
+    "background",
+    "bookmarks",
+    "cookies",
+    "tabs",
+    "*://*.domilin.com/*",
+    "http://localhost:3082/*"
+  ],
+  "optional_permissions": ["storage"],
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "__MSG_extension_name__",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "extension-icon-x16.png",
+      "32": "extension-icon-x32.png",
+      "48": "extension-icon-x48.png",
+      "128": "extension-icon-x128.png"
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+      "js": ["contentScript.bundle.js"],
+      "css": ["content.styles.css"]
+    }
+  ],
+  "icons": {
+    "16": "extension-icon-x16.png",
+    "32": "extension-icon-x32.png",
+    "48": "extension-icon-x48.png",
+    "128": "extension-icon-x128.png"
+  },
+  "web_accessible_resources": [
+    "content.styles.css",
+    "extension-icon-x128",
+    "extension-icon-x32"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}

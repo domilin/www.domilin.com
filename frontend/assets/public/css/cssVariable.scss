@@ -1,0 +1,67 @@
+@mixin iconVar {
+    --icon__text__size: 14px;
+    --icon__size: 96px;
+    --icon__radius: 7px;
+}
+
+@mixin iconVarMob {
+    --icon__text__size: 12px !important;
+    --icon__size: 64px !important;
+    --icon__radius: 5px;
+}
+
+@mixin levelVar {
+    --level__size: 38px;
+    --level__radius: 5px;
+}
+
+@mixin levelVarMob {
+    --level__size: 38px !important;
+    --level__radius: 5px;
+}
+
+@mixin searchVar {
+    --search__size: 60px;
+    --search__radius: 7px;
+    --search__more__radius: 9px;
+}
+
+@mixin searchVarMob {
+    --search__size: 48px !important;
+    --search__radius: 5px;
+    --search__more__radius: 7px;
+}
+
+@mixin searchLevelPaddingTop {
+    --search__level__padding__top: 10vh;
+    --search__level__padding__bottom: 6vh;
+}
+
+@mixin searchLevelPaddingTopMob {
+    --search__level__padding__top: 60px;
+    --search__level__padding__bottom: 30px;
+}
+
+@mixin careerArticleSearchStyle {
+    .search-engine-wrapper {
+        padding: 10vh 0 7vh;
+
+        .search-engine {
+            input {
+                padding-left: 16px;
+            }
+        }
+    }
+}
+
+@mixin careerArticleSearchStyleMob {
+    .search-engine-wrapper {
+        padding: 60px 0 40px;
+
+        .search-engine {
+            input {
+                padding-left: 12px;
+            }
+        }
+    }
+}

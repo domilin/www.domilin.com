@@ -1,0 +1,257 @@
+@import '../../public/css/themes/themeify.scss';
+@import "../../../node_modules/media-quill/es/index.scss";
+@import "../../../node_modules/highlight.js/styles/monokai-sublime.css";
+@import './editor.scss';
+@import './editor-submit.scss';
+
+.submit-wrapper {
+    .article-list-content {
+        .article-search-self {
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 42px;
+            line-height: 42px;
+            font-size: 14px;
+            border-radius: 3px;
+
+            @include themeify {
+                color: themed('font-color-white-grey');
+                background: themed('block-bg-color-hover');
+            }
+
+            &:hover span {
+                @include themeify {
+                    color: themed('font-color-white-grey');
+                }
+            }
+
+            input {
+                padding: 0 12px;
+                background: none;
+                border: none;
+                height: 100%;
+                width: 220px;
+
+                @include themeify {
+                    color: themed('font-color-white-grey');
+                }
+            }
+
+            span {
+                margin-right: 12px;
+                cursor: pointer;
+                transition: all 0.3s ease-in 0s;
+
+                @include themeify {
+                    color: themed('block-font-color');
+                }
+            }
+        }
+    }
+
+    .write-article {
+        .article-title {
+            margin: -18px 0 32px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+            line-height: 64px;
+            font-size: 24px;
+            font-weight: 500;
+
+            @include themeify {
+                border-bottom: 1px solid themed('border-color');
+                color: themed('font-color-white-grey');
+            }
+
+            &:hover span {
+                @include themeify {
+                    color: themed('font-color-white-grey');
+                }
+            }
+
+            input {
+                background: none;
+                border: none;
+                height: 100%;
+                width: 86%;
+
+                @include themeify {
+                    color: themed('font-color-white-grey');
+                }
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            em {
+                font-style: normal;
+
+                &.error {
+                    color: rgb(230, 22, 43);
+                }
+            }
+        }
+
+        .article-channel {
+            margin-bottom: 20px;
+            padding: 0 12px 4px !important;
+            display: block !important;
+            height: auto !important;
+
+            h3 {
+                padding: 16px 0;
+                font-size: 14px;
+                font-weight: normal;
+
+                @include themeify {
+                    color: themed('block-font-color');
+                }
+            }
+
+            .article-channel-select {
+                display: flex;
+                flex-flow: wrap;
+
+                .article-channel-option {
+                    margin: 0 12px 12px 0;
+                    padding: 6px 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out 0s;
+
+                    &.active,
+                    &:hover {
+                        background: rgba(22, 134, 240, 0.5);
+
+                        @include themeify {
+                            color: themed('block-font-color-hover');
+                        }
+                    }
+                }
+            }
+        }
+
+        .article-tags,
+        .article-channel {
+            padding: 0 12px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 48px;
+            border-radius: 3px;
+            font-size: 14px;
+
+            @include themeify {
+                color: themed('font-color-white-grey');
+                background: themed('block-bg-color-hover');
+            }
+
+            .tag-item {
+                margin-right: 16px;
+                transition: all 0.3 ease-in 0s;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                span {
+                    font-weight: 500;
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    @include themeify {
+                        color: themed('block-font-color-hover');
+                    }
+                }
+            }
+
+            .tag-input-wrapper {
+                position: relative;
+                width: 260px;
+                height: 32px;
+
+                input {
+                    border: none;
+                    background: none;
+                    height: 100%;
+                    width: 100%;
+
+                    @include themeify {
+                        border-bottom: 1px solid themed('border-color');
+                        color: themed('font-color-white-grey');
+                    }
+                }
+
+                .tag-dropdown {
+                    position: absolute;
+                    left: 0;
+                    bottom: 40px;
+                    width: 100%;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    max-height: 194px;
+
+                    @include themeify {
+                        border: 1px solid themed('border-color');
+                        border-bottom: none;
+                        background: themed('block-bg-color');
+                    }
+
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+
+                    span {
+                        padding: 0 12px;
+                        line-height: 32px;
+                        font-size: 14px;
+                        display: block;
+                        cursor: pointer;
+
+                        @include themeify {
+                            color: themed('font-color-white-grey');
+                        }
+
+                        &:hover {
+                            @include themeify {
+                                background: themed('block-bg-color-hover');
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .article-send {
+            margin: 40px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .submit-wrapper {
+        .write-article {
+            padding: 12px;
+            width: calc(100% - 24px);
+
+            .article-tags {
+                padding: 8px 12px;
+                height: auto;
+                flex-wrap: wrap;
+
+                .tag-input-wrapper {
+                    margin-bottom: 8px;
+                    order: -1;
+                }
+            }
+        }
+    }
+}

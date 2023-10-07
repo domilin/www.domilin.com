@@ -1,0 +1,72 @@
+@import "../../public/css/normalize";
+@import "../../public/css/public";
+@import '../../public/css/themes/themeify.scss';
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.layout-content {
+    position: relative;
+    z-index: 1;
+    padding-left: 212px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    transition: width 0.3s ease-in-out 0s, padding-left 0.3s ease-in-out 0s, padding-right 0.3s ease-in-out 0s;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.error-container {
+    margin: 0 auto;
+    min-height: 500px;
+
+    h1 {
+        color: #3f3f3f;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    pre {
+        display: none;
+    }
+}
+
+.error-component-did-catch {
+    .error-message {
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        z-index: 9999;
+
+        span {
+            padding: 0 20px;
+            background: rgba(120, 0, 0, 0.9);
+            display: inline-block;
+            height: 36px;
+            color: #fff;
+            font-size: 14px;
+            line-height: 36px;
+        }
+    }
+
+    pre {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .layout-content {
+        padding-left: 0 !important;
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,25 @@
+@import './index.scss';
+
+/*
+  使用demo
+  .app-home {
+    font-size: 18px;
+    @include themeify {
+      color: themed('block-font-color');
+    }
+  }
+ */
+
+@mixin themeify {
+    @each $theme-name, $theme-map in $themes {
+        $theme-map: $theme-map !global;
+
+        body[data-theme=#{$theme-name}] & {
+            @content;
+        }
+    }
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}

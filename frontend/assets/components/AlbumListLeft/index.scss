@@ -1,0 +1,57 @@
+@import '../../public/css/themes/themeify.scss';
+
+.album-list-left-title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 0 16px 0;
+
+    @include themeify {
+        color: themed('block-font-color');
+        border-bottom: 1px solid themed('border-color');
+    }
+}
+
+.album-list-left {
+    margin-bottom: 48px;
+
+    li {
+        margin-bottom: 12px;
+        padding: 12px;
+        line-height: 24px;
+        transition: all 0.3s ease-in 0s;
+        list-style: none;
+
+        a {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+
+            @include themeify {
+                color: themed('font-color-white-grey');
+            }
+        }
+
+        @include themeify {
+            border-bottom: 1px solid themed('border-color');
+        }
+
+        &:hover,
+        &.active {
+            @include themeify {
+                background: themed('block-bg-color-hover');
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .album-list-left-title {
+        padding: 0 0 16px 12px;
+    }
+
+    .album-list-left {
+        li {
+            padding: 12px;
+        }
+    }
+}
